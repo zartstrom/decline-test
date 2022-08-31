@@ -15,7 +15,7 @@ object Minimal {
   def parseMinimalConfig(
     args: Array[String]
   ): Either[Help, Minimal] = {
-    val command = Command("command", "our command", false)(configOpts)
+    val command = Command(name = "min-example", header = "my-header")(configOpts)
     command.parse(args)
   }
 }
